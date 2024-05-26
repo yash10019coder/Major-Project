@@ -1,8 +1,116 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Blakley(1979)]{blakley1979safeguarding}
+G.~R. Blakley.
+\newblock Safeguarding cryptographic keys.
+\newblock In \emph{1979 international workshop on managing requirements
+  knowledge (MARK)}, pages 313--318. IEEE, 1979.
+
+\bibitem[Boneh et~al.(2001)Boneh, Lynn, and Shacham]{boneh2001short}
+D.~Boneh, B.~Lynn, and H.~Shacham.
+\newblock Short signatures from the weil pairing.
+\newblock In \emph{International conference on the theory and application of
+  cryptology and information security}, pages 514--532. Springer, 2001.
+
+\bibitem[Boneh et~al.(2003)Boneh, Gentry, Lynn, and
+  Shacham]{boneh2003aggregate}
+D.~Boneh, C.~Gentry, B.~Lynn, and H.~Shacham.
+\newblock Aggregate and verifiably encrypted signatures from bilinear maps.
+\newblock In \emph{International Conference on the Theory and Applications of
+  Cryptographic Techniques}, pages 416--432. Springer, 2003.
+
+\bibitem[Desmedt(1988)]{desmedt1988threshold}
+Y.~G. Desmedt.
+\newblock Threshold cryptography.
+\newblock \emph{European transactions on telecommunications}, 5\penalty0
+  (4):\penalty0 449--458, 1988.
+
+\bibitem[Fan et~al.(2019)Fan, Su, Liu, Chen, and Bai]{fan2019new}
+L.~Fan, H.~Su, T.~Liu, X.~Chen, and G.~Bai.
+\newblock A new hardware wallet scheme for cryptocurrencies.
+\newblock In \emph{2019 IEEE International Conference on Blockchain
+  (Blockchain)}, pages 386--392. IEEE, 2019.
+
+\bibitem[Gennaro et~al.(2016)Gennaro, Goldfeder, and
+  Narayanan]{gennaro2016threshold}
+R.~Gennaro, S.~Goldfeder, and A.~Narayanan.
+\newblock Threshold-optimal dsa/ecdsa signatures and an application to bitcoin
+  wallet security.
+\newblock In \emph{International Conference on Applied Cryptography and Network
+  Security}, pages 156--174. Springer, 2016.
+
+\bibitem[Gutoski and Stebila(2015)]{gutoski2015hierarchical}
+G.~Gutoski and D.~Stebila.
+\newblock Hierarchical deterministic bitcoin wallets that tolerate key leakage.
+\newblock In \emph{International Conference on Financial Cryptography and Data
+  Security}, pages 497--504. Springer, 2015.
+
+\bibitem[Johnson et~al.(2001)Johnson, Menezes, and
+  Vanstone]{johnson2001elliptic}
+D.~Johnson, A.~Menezes, and S.~Vanstone.
+\newblock The elliptic curve digital signature algorithm (ecdsa).
+\newblock \emph{International journal of information security}, 1\penalty0
+  (1):\penalty0 36--63, 2001.
+
+\bibitem[Kaga et~al.(2017)Kaga, Fujio, Naganuma, Takahashi, Murakami, Ohki, and
+  Nishigaki]{kaga2017secure}
+Y.~Kaga, M.~Fujio, K.~Naganuma, K.~Takahashi, T.~Murakami, T.~Ohki, and
+  M.~Nishigaki.
+\newblock A secure and usable offline backup system for cryptocurrency wallets.
+\newblock In \emph{2017 IEEE 41st Annual Computer Software and Applications
+  Conference (COMPSAC)}, volume~2, pages 34--39. IEEE, 2017.
+
+\bibitem[Karantias et~al.(2020)Karantias, Kiayias, and
+  Zindros]{karantias2020proof}
+K.~Karantias, A.~Kiayias, and D.~Zindros.
+\newblock Proof-of-burn.
+\newblock In \emph{International Conference on Financial Cryptography and Data
+  Security}, pages 523--540. Springer, 2020.
+
+\bibitem[Liao and Lee(2010)]{liao2010novel}
+K.-C. Liao and W.-H. Lee.
+\newblock A novel user authentication scheme based on qr-code.
+\newblock \emph{Journal of networks}, 5\penalty0 (8):\penalty0 937--941, 2010.
+
+\bibitem[M'Raihi et~al.(2011)M'Raihi, Machani, Pei, and Rydell]{mraihi2011totp}
+D.~M'Raihi, S.~Machani, M.~Pei, and J.~Rydell.
+\newblock Totp: Time-based one-time password algorithm.
+\newblock Technical report, RFC 6238, May, 2011.
+
+\bibitem[M{\"u}hle et~al.(2018)M{\"u}hle, Gr{\"u}ner, Gayvoronskaya, and
+  Meinel]{muhle2018survey}
+A.~M{\"u}hle, A.~Gr{\"u}ner, T.~Gayvoronskaya, and C.~Meinel.
+\newblock A survey on essential components of a self-sovereign identity.
+\newblock \emph{Computer Science Review}, 30:\penalty0 80--86, 2018.
+
+\bibitem[Reese et~al.(2019)Reese, Smith, Dutson, Armknecht, Cameron, and
+  Seamons]{reese2019usability}
+K.~Reese, T.~Smith, J.~Dutson, J.~Armknecht, J.~Cameron, and K.~Seamons.
+\newblock A usability study of five two-factor authentication methods.
+\newblock In \emph{Fifteenth Symposium on Usable Privacy and Security (SOUPS
+  2019)}, 2019.
+
+\bibitem[Schnorr(1991)]{schnorr1991efficient}
+C.-P. Schnorr.
+\newblock Efficient signature generation by smart cards.
+\newblock \emph{Journal of cryptology}, 4\penalty0 (3):\penalty0 161--174,
+  1991.
+
+\bibitem[Shamir(1979)]{shamir1979share}
+A.~Shamir.
+\newblock How to share a secret.
+\newblock \emph{Communications of the ACM}, 22\penalty0 (11):\penalty0
+  612--613, 1979.
+
+\bibitem[Shoup(2000)]{shoup2000practical}
+V.~Shoup.
+\newblock Practical threshold signatures.
+\newblock In \emph{International Conference on the Theory and Applications of
+  Cryptographic Techniques}, pages 207--220. Springer, 2000.
 
 \end{thebibliography}

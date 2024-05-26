@@ -1,45 +1,42 @@
-\chapter{Implementation}
-
-\section{Technologies Used}
-The implementation of the split key wallet protocol and mobile authenticator for the Züs platform involves the following technologies:
+% Chapter 3
+\chapter{Methodology}
+\label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter3}
+\section{System Architecture}
+The proposed system architecture for the split key wallet protocol and mobile authenticator integration with the Züs platform consists of the following components:
 \begin{itemize}
-    \item Programming Languages: The core components of the system are implemented using Rust and Solidity programming languages.
-    \item Cryptographic Libraries: The BLS signature scheme is implemented using the Apache Milagro Cryptographic Library (AMCL), which provides efficient implementations of pairing-based cryptography.
-    \item Mobile Development Framework: The mobile authenticator is developed using the Flutter framework, enabling cross-platform compatibility for iOS and Android devices.
-    \item Secure Storage: The key components and sensitive data are stored securely using hardware-backed keystores, such as the Secure Enclave on iOS and the Keystore on Android.
+\item Züs Platform: The core platform that provides decentralized storage and cryptocurrency functionalities.
+\item Split Key Wallet: A wallet implementation that splits the private key into multiple components and stores them on separate devices.
+\item Mobile Authenticator: A dedicated mobile application that acts as an additional authentication factor and facilitates transaction signing.
+\item Cryptographic Library: A library that provides the necessary cryptographic primitives, including the BLS signature scheme.
 \end{itemize}
-
-\section{Smart Contract Development}
-The Züs platform utilizes smart contracts to facilitate decentralized storage and cryptocurrency transactions. The split key wallet protocol is integrated into the existing smart contract infrastructure. The main modifications include:
+\section{Split Key Wallet Protocol}
+The split key wallet protocol is designed to enhance the security of private key management by splitting the private key into multiple components. The protocol consists of the following steps:
+\begin{enumerate}
+\item Key Generation: The user generates a private key and corresponding public key using the BLS signature scheme.
+\item Key Splitting: The private key is split into two components using a threshold secret sharing scheme, such as Shamir's secret sharing.
+\item Component Distribution: One component is stored on the user's primary device (e.g., laptop), while the other component is securely transferred to the mobile authenticator.
+\item Transaction Signing: To sign a transaction, the user initiates the signing process on the primary device, which generates a partial signature using its key component. The partial signature is then securely transmitted to the mobile authenticator, which combines it with its key component to produce the final signature.
+\end{enumerate}
+\section{Mobile Authenticator}
+The mobile authenticator is a dedicated mobile application that serves as an additional authentication factor and facilitates transaction signing. The main features of the mobile authenticator include:
 \begin{itemize}
-    \item Signature Verification: The smart contracts are updated to support the verification of BLS signatures, ensuring the integrity of transactions.
-    \item Key Management: The smart contracts handle the registration and management of public keys associated with the split key wallets.
+\item Secure Storage: The mobile authenticator securely stores the user's key component and any other sensitive information.
+\item Authentication: The mobile authenticator provides an additional layer of authentication, requiring the user to confirm their identity through biometric authentication or a PIN.
+\item Transaction Signing: The mobile authenticator receives partial signatures from the primary device and combines them with its key component to generate the final signature for transaction approval.
+\item Notifications: The mobile authenticator sends real-time notifications to the user for pending transaction approvals and other important events.
 \end{itemize}
-
-\section{Wallet Integration}
-The split key wallet protocol is integrated into the existing Züs wallet implementation. The main changes include:
+\section{BLS Signature Scheme}
+The BLS signature scheme is chosen for the implementation due to its support for key splitting and aggregation. The BLS scheme offers the following advantages:
 \begin{itemize}
-    \item Key Generation: The wallet is modified to generate BLS key pairs and split the private key into multiple components.
-    \item Partial Signature Generation: The wallet is updated to generate partial signatures using the key component stored on the primary device.
-    \item Communication with Mobile Authenticator: The wallet establishes a secure communication channel with the mobile authenticator for transmitting partial signatures and receiving the final signature.
+\item Short Signatures: BLS signatures are compact, reducing the storage and transmission overhead.
+\item Aggregation: Multiple BLS signatures can be aggregated into a single signature, enabling efficient verification of multiple transactions.
+\item Key Splitting: BLS private keys can be split into multiple components, facilitating the implementation of the split key wallet protocol.
 \end{itemize}
-
-\section{Mobile Authenticator Development}
-The mobile authenticator is developed as a standalone mobile application using the Flutter framework. The main components of the mobile authenticator include:
+\section{Security Considerations}
+The security of the proposed system relies on several assumptions and best practices:
 \begin{itemize}
-    \item User Interface: The user interface is designed to provide a seamless and intuitive experience for authentication and transaction approval.
-    \item Biometric Authentication: The mobile authenticator integrates biometric authentication (e.g., fingerprint or facial recognition) to ensure the security of user interactions.
-    \item Secure Storage: The key component and other sensitive data are stored securely using the hardware-backed keystore available on the mobile device.
-    \item Push Notifications: The mobile authenticator integrates with the Züs platform's notification system to receive real-time alerts for pending transaction approvals.
+\item Secure Key Storage: The key components must be stored securely on the respective devices, protecting against unauthorized access.
+\item Secure Communication: The communication channels between the primary device and the mobile authenticator must be encrypted and authenticated to prevent eavesdropping and tampering.
+\item Device Security: Users are responsible for maintaining the security of their devices, including regular software updates and protection against malware.
+\item Backup and Recovery: Mechanisms for secure backup and recovery of key components must be in place to prevent permanent loss of access to funds.
 \end{itemize}
-
-\section{Integration Testing}
-Rigorous integration testing is performed to ensure the smooth functioning of the split key wallet protocol and mobile authenticator within the Züs platform. The testing scenarios include:
-\begin{itemize}
-    \item Key Generation and Splitting: Verifying the correctness of key generation and the splitting of the private key into multiple components.
-    \item Transaction Signing: Testing the end-to-end process of initiating a transaction, generating partial signatures, and combining them to produce the final signature.
-    \item Mobile Authenticator Functionality: Validating the mobile authenticator's user interface, biometric authentication, secure storage, and push notification capabilities.
-    \item Error Handling and Recovery: Testing various error scenarios, such as network disruptions or device failures, and ensuring proper error handling and recovery mechanisms are in place.
-\end{itemize}
-
-The implementation phase involves close collaboration between the development team and the Züs platform stakeholders to ensure seamless integration and adherence to the platform's security and performance requirements.

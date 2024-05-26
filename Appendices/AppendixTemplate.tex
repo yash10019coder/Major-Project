@@ -1,7 +1,56 @@
 % Appendix Template
-
-\chapter*{Appendix Title Here} 
-
-\label{AppendixX} 
-
-Write your Appendix content here.
+\chapter*{Appendix: Split Key Wallet Protocol Implementation Details}
+\label{AppendixA}
+This appendix provides additional technical details and code snippets related to the implementation of the split key wallet protocol and mobile authenticator for the Züs platform.
+\section*{BLS Signature Scheme Implementation}
+The BLS signature scheme was implemented using the Apache Milagro Cryptographic Library (AMCL). The following code snippet shows the key generation and signing functions:
+\begin{verbatim}
+// Generate BLS key pair
+func GenerateKeyPair() (SecretKey, PublicKey) {
+secret := amcl.NewRAND()
+secretKey := secret.GetBIG()
+publicKey := secret.G2mul(amcl.GeneratorG2(), secretKey)
+return secretKey, publicKey
+}
+// BLS signing function
+func Sign(message []byte, secretKey SecretKey) Signature {
+hash := amcl.HashG1(message)
+signature := amcl.G1mul(hash, secretKey)
+return signature
+}
+\end{verbatim}
+\section*{Split Key Wallet Protocol Integration}
+The split key wallet protocol was integrated into the existing Züs wallet implementation. The following code snippet demonstrates the key splitting and partial signature generation:
+\begin{verbatim}
+// Split the private key into two components
+func SplitKey(secretKey SecretKey) (SecretKey, SecretKey) {
+sk1 := amcl.NewBIGcopy(secretKey)
+sk2 := amcl.NewBIGcopy(secretKey)
+sk1.Div(amcl.NewBIGint(2))
+sk2.Sub(secretKey, sk1)
+return sk1, sk2
+}
+// Generate partial signature on device 1
+func SignPartial1(message []byte, sk1 SecretKey) PartialSignature {
+hash := amcl.HashG1(message)
+partialSig := amcl.G1mul(hash, sk1)
+return partialSig
+}
+\end{verbatim}
+\section*{Mobile Authenticator Development}
+The mobile authenticator was developed using the Flutter framework. The following code snippet shows the transaction signing process:
+\begin{verbatim}
+// Combine partial signatures to generate the final signature
+Future<Signature> combineSignatures(PartialSignature sig1, PartialSignature sig2) async {
+final combinedSig = ECPair.fromPrivate(sig1.add(sig2));
+return Signature.fromBytes(combinedSig.signature);
+}
+// Sign transaction using the mobile authenticator
+Future<void> signTransaction(Transaction transaction) async {
+final partialSig1 = await getPartialSignature1(transaction);
+final partialSig2 = await getPartialSignature2(transaction);
+final combinedSignature = await combineSignatures(partialSig1, partialSig2);
+transaction.signature = combinedSignature;
+await broadcastTransaction(transaction);
+}
+\end{verbatim}

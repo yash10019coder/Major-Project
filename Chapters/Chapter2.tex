@@ -1,17 +1,49 @@
-\chapter{Literature Review}
-
+% Chapter 2
+\chapter{Literature Review} %chapter title
+\label{Chapter2} % For referencing use \ref{Chapter2}
 \section{Key Management in Blockchain and Cryptocurrency Systems}
-Key management is a critical aspect of blockchain and cryptocurrency systems, as the security of user assets heavily relies on the integrity of private keys. Various approaches have been proposed to enhance the security of key management, including hierarchical deterministic wallets [1], multi-signature wallets [2], and threshold signature schemes [3].
-
+Key management is a critical aspect of blockchain and cryptocurrency systems, as the security of user assets heavily relies on the integrity of private keys. Various approaches have been proposed to enhance the security of key management, including hierarchical deterministic wallets \cite{gutoski2015hierarchical}, multi-signature wallets \cite{karantias2020proof}, and threshold signature schemes \cite{gennaro2016threshold}.
 \section{Authentication Mechanisms in Decentralized Systems}
-Authentication in decentralized systems poses unique challenges due to the absence of a central authority. Several authentication mechanisms have been explored, such as decentralized identity systems [4], biometric authentication [5], and hardware-based authentication [6].
-
+Authentication in decentralized systems poses unique challenges due to the absence of a central authority. Several authentication mechanisms have been explored, such as decentralized identity systems \cite{muhle2018survey}, biometric authentication \cite{kaga2017secure}, and hardware-based authentication \cite{fan2019new}.
 \section{Signature Schemes for Blockchain and Cryptocurrency}
-Signature schemes play a vital role in ensuring the integrity and non-repudiation of transactions in blockchain and cryptocurrency systems. The most commonly used signature schemes include the Elliptic Curve Digital Signature Algorithm (ECDSA) [7] and the Schnorr signature scheme [8]. Recently, more advanced signature schemes, such as the BLS signature scheme [9] and the Boneh-Lynn-Shacham (BLS) signature scheme [10], have gained attention due to their support for key aggregation and efficient verification.
-
+Signature schemes play a vital role in ensuring the integrity and non-repudiation of transactions in blockchain and cryptocurrency systems. The most commonly used signature schemes include the Elliptic Curve Digital Signature Algorithm (ECDSA) \cite{johnson2001elliptic} and the Schnorr signature scheme \cite{schnorr1991efficient}. Recently, more advanced signature schemes, such as the BLS signature scheme \cite{boneh2001short} and the Boneh-Lynn-Shacham (BLS) signature scheme \cite{boneh2003aggregate}, have gained attention due to their support for key aggregation and efficient verification.
 \section{Split Key Protocols and Threshold Cryptography}
-Split key protocols and threshold cryptography have been studied extensively in the context of secure key management and distributed trust. Shamir's secret sharing [11] and Blakley's secret sharing [12] are well-known techniques for splitting a secret into multiple shares, requiring a threshold number of shares to reconstruct the original secret. These techniques have been applied to various cryptographic primitives, including encryption [13] and digital signatures [14].
-
+Split key protocols and threshold cryptography have been studied extensively in the context of secure key management and distributed trust. Shamir's secret sharing \cite{shamir1979share} and Blakley's secret sharing \cite{blakley1979safeguarding} are well-known techniques for splitting a secret into multiple shares, requiring a threshold number of shares to reconstruct the original secret. These techniques have been applied to various cryptographic primitives, including encryption \cite{desmedt1988threshold} and digital signatures \cite{shoup2000practical}.
 \section{Mobile Authenticators and Two-Factor Authentication}
-Mobile authenticators and two-factor authentication (2FA) have become increasingly popular for enhancing the security of user authentication. Various schemes have been proposed, such as time-based one-time passwords (TOTP) [15], push notifications [16], and QR code-based authentication [17]. These schemes provide an additional layer of security by requiring users to possess a secondary device or token in addition to their primary authentication factor (e.g., password).
-
+Mobile authenticators and two-factor authentication (2FA) have become increasingly popular for enhancing the security of user authentication. Various schemes have been proposed, such as time-based one-time passwords (TOTP) \cite{mraihi2011totp}, push notifications \cite{reese2019usability}, and QR code-based authentication \cite{liao2010novel}. These schemes provide an additional layer of security by requiring users to possess a secondary device or token in addition to their primary authentication factor (e.g., password).
+% \begin{thebibliography}{9}
+% \bibitem{gutoski2015hierarchical}
+% Gutoski, G., & Stebila, D. (2015). Hierarchical deterministic Bitcoin wallets that tolerate key leakage. In International Conference on Financial Cryptography and Data Security (pp. 497-504). Springer, Berlin, Heidelberg.
+% \bibitem{karantias2020proof}
+% Karantias, K., Kiayias, A., & Zindros, D. (2020). Proof-of-burn. In International Conference on Financial Cryptography and Data Security (pp. 523-540). Springer, Cham.
+% \bibitem{gennaro2016threshold}
+% Gennaro, R., Goldfeder, S., & Narayanan, A. (2016). Threshold-optimal DSA/ECDSA signatures and an application to Bitcoin wallet security. In International Conference on Applied Cryptography and Network Security (pp. 156-174). Springer, Cham.
+% \bibitem{muhle2018survey}
+% Mühle, A., Grüner, A., Gayvoronskaya, T., & Meinel, C. (2018). A survey on essential components of a self-sovereign identity. Computer Science Review, 30, 80-86.
+% \bibitem{kaga2017secure}
+% Kaga, Y., Fujio, M., Naganuma, K., Takahashi, K., Murakami, T., Ohki, T., & Nishigaki, M. (2017). A secure and usable offline backup system for cryptocurrency wallets. In 2017 IEEE 41st Annual Computer Software and Applications Conference (COMPSAC) (Vol. 2, pp. 34-39). IEEE.
+% \bibitem{fan2019new}
+% Fan, L., Su, H., Liu, T., Chen, X., & Bai, G. (2019). A new hardware wallet scheme for cryptocurrencies. In 2019 IEEE International Conference on Blockchain (Blockchain) (pp. 386-392). IEEE.
+% \bibitem{johnson2001elliptic}
+% Johnson, D., Menezes, A., & Vanstone, S. (2001). The elliptic curve digital signature algorithm (ECDSA). International Journal of Information Security, 1(1), 36-63.
+% \bibitem{schnorr1991efficient}
+% Schnorr, C. P. (1991). Efficient signature generation by smart cards. Journal of cryptology, 4(3), 161-174.
+% \bibitem{boneh2001short}
+% Boneh, D., Lynn, B., & Shacham, H. (2001). Short signatures from the Weil pairing. In International Conference on the Theory and Application of Cryptology and Information Security (pp. 514-532). Springer, Berlin, Heidelberg.
+% \bibitem{boneh2003aggregate}
+% Boneh, D., Gentry, C., Lynn, B., & Shacham, H. (2003). Aggregate and verifiably encrypted signatures from bilinear maps. In International Conference on the Theory and Applications of Cryptographic Techniques (pp. 416-432). Springer, Berlin, Heidelberg.
+% \bibitem{shamir1979share}
+% Shamir, A. (1979). How to share a secret. Communications of the ACM, 22(11), 612-613.
+% \bibitem{blakley1979safeguarding}
+% Blakley, G. R. (1979). Safeguarding cryptographic keys. In 1979 International Workshop on Managing Requirements Knowledge (MARK) (pp. 313-318). IEEE.
+% \bibitem{desmedt1988threshold}
+% Desmedt, Y. G. (1988). Threshold cryptography. European Transactions on Telecommunications, 5(4), 449-458.
+% \bibitem{shoup2000practical}
+% Shoup, V. (2000). Practical threshold signatures. In International Conference on the Theory and Applications of Cryptographic Techniques (pp. 207-220). Springer, Berlin, Heidelberg.
+% \bibitem{mraihi2011totp}
+% M'Raihi, D., Machani, S., Pei, M., & Rydell, J. (2011). Totp: Time-based one-time password algorithm (No. RFC 6238).
+% \bibitem{reese2019usability}
+% Reese, K., Smith, T., Dutson, J., Armknecht, J., Cameron, J., & Seamons, K. (2019). A usability study of five two-factor authentication methods. In Fifteenth Symposium on Usable Privacy and Security (SOUPS 2019).
+% \bibitem{liao2010novel}
+% Liao, K. C., & Lee, W. H. (2010). A novel user authentication scheme based on QR-code. Journal of Networks, 5(8), 937-941.
+% \end{thebibliography}

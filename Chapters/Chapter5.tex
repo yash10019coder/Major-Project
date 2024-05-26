@@ -1,53 +1,28 @@
-\chapter{Results and Analysis}
-
-\section{Performance Evaluation}
-The performance of the split key wallet protocol and mobile authenticator is evaluated in terms of various metrics, including:
+% Chapter 5
+\chapter{Conclusion and Future Work} % Main chapter title
+\label{Chapter5} % For referencing use \ref{Chapter5}
+\section{Summary}
+This project aimed to enhance the security and usability of the Züs cryptocurrency platform by implementing a split key wallet protocol and developing a dedicated mobile authenticator. The split key wallet protocol improves key management and reduces the risk of private key compromise by splitting the key into multiple components stored on separate devices. The mobile authenticator provides an additional layer of security for user authentication and transaction signing.
+The implementation leverages the BLS signature scheme, which supports key splitting and aggregation, offering improved efficiency compared to other signature schemes like Schnorr and ECDSA. The system architecture consists of the Züs platform, split key wallet, mobile authenticator, and cryptographic library components.
+The split key wallet protocol involves key generation, key splitting, component distribution, and transaction signing steps. The mobile authenticator, developed using the Flutter framework, provides secure storage, biometric authentication, transaction signing, and push notification capabilities.
+The implementation phase involved smart contract development, wallet integration, mobile authenticator development, and rigorous integration testing. The technologies used include Rust, Solidity, Apache Milagro Cryptographic Library, and hardware-backed keystores for secure storage.
+\section{Contributions}
+The main contributions of this project are as follows:
 \begin{itemize}
-    \item Transaction Signing Latency: The time taken to complete the transaction signing process, including the generation of partial signatures and the combination of signatures on the mobile authenticator.
-    \item Signature Verification Overhead: The additional computational overhead introduced by the BLS signature verification compared to traditional signature schemes such as ECDSA [7].
-    \item Communication Overhead: The network overhead incurred due to the transmission of partial signatures between the primary device and the mobile authenticator.
+\item Enhancing the security of private key management in the Züs platform through the implementation of the split key wallet protocol.
+\item Developing a user-friendly mobile authenticator that provides an additional layer of security for user authentication and transaction signing.
+\item Demonstrating the feasibility and efficiency of the BLS signature scheme for key splitting and aggregation in a real-world cryptocurrency platform.
+\item Providing a comprehensive system architecture and implementation details that can serve as a reference for similar projects in the blockchain and cryptocurrency domain.
 \end{itemize}
-
-The performance evaluation results demonstrate the efficiency and practicality of the implemented solution. The split key wallet protocol and mobile authenticator achieve reasonable transaction signing latencies, ensuring a smooth user experience. The BLS signature scheme introduces minimal verification overhead compared to ECDSA, making it suitable for resource-constrained devices [18]. The communication overhead is optimized through the use of compact BLS signatures, reducing the amount of data transmitted between devices.
-
-\section{Security Analysis}
-The security of the split key wallet protocol and mobile authenticator is analyzed against various threat models and attack scenarios. The analysis covers the following aspects:
+\section{Future Work}
+While this project successfully achieves its objectives, there are several areas for future work and improvement:
 \begin{itemize}
-    \item Key Compromise Resistance: The split key approach significantly reduces the risk of private key compromise, as an attacker would need to breach multiple devices to obtain the complete private key [19].
-    \item Signature Unforgeability: The BLS signature scheme provides strong unforgeability guarantees, ensuring that an attacker cannot forge valid signatures without possessing the private key components [20].
-    \item Secure Communication: The use of encrypted and authenticated communication channels between the primary device and the mobile authenticator prevents eavesdropping and tampering attacks [21].
-    \item Device Security: The implementation relies on hardware-backed keystores and secure enclaves to protect sensitive data, mitigating the risk of unauthorized access even if a device is compromised [22].
+\item Extending the split key wallet protocol to support multiple devices and a higher threshold of key components for increased security.
+\item Exploring the integration of secure multi-party computation techniques to enhance the privacy and security of the key splitting and transaction signing processes.
+\item Conducting extensive user studies to gather feedback and improve the usability and user experience of the mobile authenticator.
+\item Investigating the scalability and performance of the split key wallet protocol and mobile authenticator in large-scale deployments with a high volume of transactions.
+\item Adapting the split key wallet protocol and mobile authenticator to other blockchain and cryptocurrency platforms to promote wider adoption and interoperability.
 \end{itemize}
-
-The security analysis demonstrates the robustness of the implemented solution against various attack vectors. The split key approach and the use of the BLS signature scheme provide a high level of security for user assets. The integration of secure communication protocols and hardware-based security features further enhances the overall security posture of the system.
-
-\section{Usability Evaluation}
-The usability of the split key wallet protocol and mobile authenticator is evaluated through user studies and feedback sessions. The evaluation focuses on the following aspects:
-\begin{itemize}
-    \item User Experience: The intuitiveness and ease of use of the mobile authenticator interface, including the setup process, transaction approval, and biometric authentication.
-    \item Error Recovery: The effectiveness of the error handling and recovery mechanisms in guiding users through common error scenarios, such as device loss or network disruptions.
-    \item User Perceptions: The users' perceived security, trust, and confidence in the split key wallet approach and the mobile authenticator.
-\end{itemize}
-
-The usability evaluation results indicate a positive user experience, with participants finding the mobile authenticator interface intuitive and easy to navigate. The error recovery mechanisms provide clear guidance and support, enhancing the overall user experience. Users express increased confidence in the security of their assets, appreciating the added layer of protection provided by the split key approach and the mobile authenticator.
-
-\section{Comparative Analysis}
-The performance and security of the split key wallet protocol and mobile authenticator are compared against existing key management and authentication solutions in the blockchain and cryptocurrency domain. The comparative analysis considers factors such as:
-\begin{itemize}
-    \item Key Management Approaches: Comparison with single-key wallets, multi-signature wallets, and threshold signature schemes [23].
-    \item Authentication Methods: Comparison with password-based authentication, hardware wallets, and other two-factor authentication schemes [24].
-    \item Signature Schemes: Comparison with ECDSA, Schnorr signatures, and other BLS-based implementations [25].
-\end{itemize}
-
-The comparative analysis highlights the advantages of the split key wallet protocol and mobile authenticator in terms of enhanced security, usability, and performance. The split key approach offers a balanced trade-off between security and convenience, providing stronger protection against key compromise while maintaining a seamless user experience. The BLS signature scheme demonstrates superior performance and aggregation capabilities compared to traditional signature schemes.
-
-\begin{thebibliography}{99}
-    \bibitem{18} Zhang, Y., Xue, C. T., He, D., Li, J., \& Zhang, R. (2020). Efficient and secure implementation of BLS signature scheme in wireless sensor networks. IEEE Access, 8, 26260-26271.
-    \bibitem{19} Gennaro, R., Jarecki, S., Krawczyk, H., \& Rabin, T. (2007). Secure distributed key generation for discrete-log based cryptosystems. Journal of Cryptology, 20(1), 51-83.
-    \bibitem{20} Boldyreva, A. (2003). Threshold signatures, multisignatures and blind signatures based on the gap-Diffie-Hellman-group signature scheme. In International Workshop on Public Key Cryptography (pp. 31-46). Springer, Berlin, Heidelberg.
-    \bibitem{21} Barker, E., Barker, W., Burr, W., Polk, W., \& Smid, M. (2007). Recommendation for key management part 1: General (revision 3). NIST special publication, 800(57), 1-147.
-    \bibitem{22} Pinto, S., \& Santos, N. (2019). Demystifying arm trustzone: A comprehensive survey. ACM Computing Surveys (CSUR), 51(6), 1-36.
-    \bibitem{23} Gennaro, R., \& Goldfeder, S. (2018). Fast multiparty threshold ECDSA with fast trustless setup. In Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security (pp. 1179-1194).
-    \bibitem{24} Ometov, A., Bezzateev, S., Mäkitalo, N., Andreev, S., Mikkonen, T., \& Koucheryavy, Y. (2018). Multi-factor authentication: A survey. Cryptography, 2(1), 1.
-    \bibitem{25} Wang, H., He, D., \& Wang, J. (2018). Schnorr and BLS signature schemes based on LWE. In International Conference on Information and Communications Security (pp. 373-385). Springer, Cham.
-\end{thebibliography}
+\section{Conclusion}
+In conclusion, this project successfully implements a split key wallet protocol and mobile authenticator for the Züs cryptocurrency platform, enhancing the security and usability of key management and user authentication. The implementation demonstrates the effectiveness of the BLS signature scheme for key splitting and aggregation, and provides a solid foundation for further research and development in the field of blockchain and cryptocurrency security.
+The project contributes to the growing body of knowledge in decentralized storage and cryptocurrency ecosystems, and offers practical insights for developers and researchers working on similar projects. With the increasing adoption of blockchain technology and the need for secure and user-friendly solutions, the concepts and techniques explored in this project have the potential to drive innovation and shape the future of decentralized systems.
