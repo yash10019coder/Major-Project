@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Boneh(2006)]{boneh2006decision}
+D.~Boneh.
+\newblock The decision diffie-hellman problem.
+\newblock In \emph{Algorithmic Number Theory: Third International Symposiun,
+  ANTS-III Portland, Oregon, USA, June 21--25, 1998 Proceedings}, pages 48--63.
+  Springer, 2006.
+
+\end{thebibliography}
