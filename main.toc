@@ -16,9 +16,11 @@
 \contentsline {section}{\numberline {4.2}Smart Contract Development}{9}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Wallet Integration}{10}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Mobile Authenticator Development}{10}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Wallet Setup Process}{11}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Transaction Signing Process}{11}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Integration Testing}{11}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary}{13}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Contributions}{13}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Future Work}{14}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Conclusion}{14}{section.5.4}%
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Contributions}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Future Work}{16}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Conclusion}{16}{section.5.4}%

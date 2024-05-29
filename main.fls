@@ -810,6 +810,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
@@ -1055,6 +1056,17 @@ INPUT ./Chapters/Chapter4.tex
 INPUT Chapters/Chapter4.tex
 INPUT ./Chapters/Chapter4.tex
 INPUT Chapters/Chapter4.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT ./Images/setup_diagram.png
+INPUT ./Images/setup_diagram.png
+INPUT Images/setup_diagram.png
+INPUT ./Images/setup_diagram.png
+INPUT ./Images/setup_diagram.png
+INPUT ./Images/transaction_diagram.png
+INPUT ./Images/transaction_diagram.png
+INPUT Images/transaction_diagram.png
+INPUT ./Images/transaction_diagram.png
+INPUT ./Images/transaction_diagram.png
 INPUT ./Chapters/Chapter5.tex
 INPUT ./Chapters/Chapter5.tex
 INPUT ./Chapters/Chapter5.tex
